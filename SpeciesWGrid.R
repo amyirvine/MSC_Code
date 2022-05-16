@@ -13,6 +13,11 @@ library(fs)
 library(dplyr)
 library(purrr)
 
+#GITHUB setup
+library(usethis)
+?use_github
+edit_r_environ()
+use_github(protocol = 'https', auth_token = Sys.getenv("GITHUB_PAT"))
 
 #import geographical database layers
 GEO_V5 <- read.csv("~/Dropbox/FOME_DATA/GEOGRAPHICAL_LAYER/GEO_SPATIAL_META_MOL720GRID_V5.csv", header=TRUE)
