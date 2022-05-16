@@ -17,6 +17,7 @@ library(purrr)
 library(usethis)
 ?use_github
 edit_r_environ()
+gitcreds::gitcreds_set()
 use_github(protocol = 'https', auth_token = Sys.getenv("GITHUB_PAT"))
 
 #import geographical database layers
